@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PLAYER DETAILS</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+
+  <body>
+    <div id="outline">
+      <div id="left">
+        <form id="form" method="get">
+          <div class="name">
+            <div class="nl">
+              <label for="name">* NAME</label>
+            </div>
+            <div class="nr">
+              <input type="text" id="name" placeholder="Enter your name!" />
+            </div>
+          </div>
+          <div class="category">
+            <div class="cl">
+              <label for="category">* CATEGORY</label>
+            </div>
+            <div class="cr">
+              <select name="category" id="category">
+                <option value=""></option>
+                <option value="cricket">cricket</option>
+                <option value="kabadi">kabadi</option>
+                <option value="football">football</option>
+                <option value="chess">chess</option>
+                <option value="badminton">badminton</option>
+              </select>
+            </div>
+          </div>
+          <div class="type">
+            <div class="tl">
+              <label for="type">* TYPE</label>
+            </div>
+            <div class="tr">
+              <select name="type" id="type">
+                <option value=""></option>
+                <option value="indoor">indoor</option>
+                <option value="outdoor">outdoor</option>
+              </select>
+            </div>
+          </div>
+          <div class="discription">
+            <div class="dl">
+              <label>DISCRIPTION</label>
+            </div>
+            <div class="dr">
+              <textarea id="discription"></textarea>
+            </div>
+          </div>
+          <div class="profile">
+            <div class="pl">
+              <label for="profile">* PROFILE</label>
+            </div>
+            <div class="pr">
+              <input
+                type="button"
+                id="profile"
+                value="get avatar"
+                onclick="getavatar()"
+              />
+            </div>
+          </div>
+          <div id="small_image">
+            <!-- <img src="./Assets/qn.png" /> -->
+          </div>
+          <div class="alert">
+            <p id="alert"></p>
+          </div>
+          <div class="submit">
+            <input
+              type="button"
+              id="submit"
+              value="submit"
+              onclick="onSubmit()"
+            />
+          </div>
+        </form>
+      </div>
+      <div id="right" style="overflow-x: auto">
+        <div id="btn">
+          <input type="button" value="all" id="all" onclick="displayUsers()" />
+          <input
+            type="button"
+            value="cricket"
+            id="cricket"
+            onclick="filterdUsers('cricket') "
+          />
+          <input
+            type="button"
+            value="football"
+            id="football"
+            onclick="filterdUsers('football')"
+          />
+          <input
+            type="button"
+            value="kabadi"
+            id="kabadi"
+            onclick="filterdUsers('kabadi')"
+          />
+          <input
+            type="button"
+            value="chess"
+            id="chess"
+            onclick="filterdUsers('chess')"
+          />
+          <input
+            type="button"
+            value="badminton"
+            id="badminton"
+            onclick="filterdUsers('badminton')"
+          />
+        </div>
+        <div id="cardContainer"></div>
+        <div id="btn">
+          <input
+            type="button"
+            value="REMOVE ALL"
+            id="remove_all"
+            onclick="removeAll()"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
